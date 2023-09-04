@@ -1,0 +1,86 @@
+body {
+  margin: 2px;
+  background-color: rgba(47, 79, 79, 0.9);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h2, h3 {
+  margin: 5px;
+}
+
+svg {
+  width: 100px;
+  height: 100px;
+}
+
+.navbar {
+  background-color: rgba(53, 60, 67, 0.75);
+}
+
+.brand {
+  display: inline-flex;
+  font-family: "Philosopher", sans-serif;
+  flex-direction: column;
+  --size: 1.7rem;
+  --color-light: rgba(255, 210, 148, 0.923);
+  --color-mid: #ffbf66;
+  --color-dark: rgba(255, 157, 20, 0.868);
+}
+
+.brand svg {
+  order: -1;
+  height: calc(3 * var(--size));
+  width: calc(3 * var(--size));
+}
+
+.brand h2 {
+  font-size: calc(1.2 * var(--size));
+  color: var(--color-dark);
+}
+
+.brand h3 {
+  font-size: calc(0.7 * var(--size));
+  color: var(--color-light);
+}
+
+.brand div {
+  margin-bottom: calc(0.5 * var(--size));
+}
+
+.brand #drop {
+  animation: down 0.5s 2;
+}
+
+@media (min-width: 1000px) {
+  .brand {
+    flex-direction: row;
+    align-items: end;
+    flex-wrap: wrap;
+  }
+  .brand svg {
+    order: -1;
+    height: calc(5 * var(--size));
+    width: calc(5 * var(--size));
+  }
+  .brand h2 {
+    font-size: calc(2 * var(--size));
+  }
+  .brand h3 {
+    font-size: calc(1 * var(--size));
+  }
+  .brand div {
+    margin-bottom: calc(0.6 * var(--size));
+  }
+}
+@keyframes down {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(9 * var(--size)));
+  }
+}/*# sourceMappingURL=style.css.map */
